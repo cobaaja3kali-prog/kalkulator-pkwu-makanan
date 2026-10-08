@@ -1,0 +1,20 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:radial-gradient(circle at top,#202020 0%,#0b0b0b 45%,#050505 100%);color:#fff;min-height:100vh;padding:25px 15px}
+.container{width:100%;max-width:520px;margin:auto}.header{text-align:center;margin-bottom:25px}
+.icon{width:65px;height:65px;margin:auto auto 15px;display:flex;justify-content:center;align-items:center;border-radius:18px;background:linear-gradient(145deg,#292929,#111);border:1px solid #383838;font-size:30px;font-weight:bold;box-shadow:0 0 25px rgba(255,255,255,.05)}
+.header h1{font-size:27px;margin-bottom:8px}.header p{color:#888;font-size:14px}
+.card{background:rgba(20,20,20,.95);border:1px solid #292929;border-radius:20px;padding:22px;margin-bottom:18px;box-shadow:0 15px 40px rgba(0,0,0,.35)}
+.card h2{font-size:19px;margin-bottom:20px}.input-group{margin-bottom:16px}.input-group label{display:block;margin-bottom:8px;font-size:13px;color:#aaa}
+.input-box{display:flex;align-items:center;background:#0d0d0d;border:1px solid #303030;border-radius:12px;overflow:hidden;transition:.2s}
+.input-box:focus-within{border-color:#777;box-shadow:0 0 0 3px rgba(255,255,255,.04)}
+.input-box span{width:48px;text-align:center;color:#777;font-size:14px;border-right:1px solid #292929}
+.input-box input{width:100%;padding:14px;border:none;outline:none;background:transparent;color:#fff;font-size:16px}
+.input-box input::placeholder{color:#555}
+button{width:100%;border:none;border-radius:12px;padding:15px;font-size:15px;font-weight:bold;cursor:pointer;transition:.2s}
+.btn-hitung{background:#fff;color:#050505;margin-top:5px}.btn-hitung:hover{background:#ddd}.btn-hitung:active,.btn-reset:active{transform:scale(.98)}
+.btn-reset{background:#181818;color:#aaa;border:1px solid #303030;margin-top:10px}
+.hasil{display:none}.result{display:flex;justify-content:space-between;align-items:center;background:#101010;border:1px solid #282828;border-radius:12px;padding:15px;margin-bottom:10px}
+.result span{color:#999;font-size:13px}.result strong{color:#fff;font-size:15px}.result.utama{padding:20px;background:linear-gradient(135deg,#222,#111);border-color:#444;margin-bottom:12px}
+.result.utama span{display:block;margin-bottom:7px}.result.utama strong{font-size:23px}.result.bersih{margin-top:15px;padding:18px;border-color:#555;background:#181818}.result.bersih span{color:#ccc}.result.bersih strong{font-size:20px}
+.rumus{color:#aaa}.rumus h2{color:#fff}.rumus p{background:#101010;border-left:3px solid #555;padding:12px;border-radius:8px;margin-bottom:9px;font-size:13px;line-height:1.6}.rumus b{color:#ddd}
+@media(max-width:400px){body{padding:15px 10px}.card{padding:18px}.header h1{font-size:23px}.result strong{font-size:14px}}

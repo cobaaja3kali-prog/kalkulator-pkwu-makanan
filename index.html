@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator Biaya Produksi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="icon">¥</div>
+    <h1>Kalkulator Produksi</h1>
+    <p>Hitung biaya dan keuntungan produksi</p>
+  </div>
+
+  <div class="card">
+    <h2>Data Produksi</h2>
+
+    <div class="input-group">
+      <label>Modal Awal</label>
+      <div class="input-box"><span>Rp</span><input type="text" id="modal" inputmode="numeric" placeholder="1.000.000"></div>
+    </div>
+
+    <div class="input-group">
+      <label>Foot Cost (%)</label>
+      <div class="input-box"><span>%</span><input type="text" id="footCost" inputmode="decimal" placeholder="80"></div>
+    </div>
+
+    <div class="input-group">
+      <label>Jumlah Biji / Produk</label>
+      <div class="input-box"><span>×</span><input type="text" id="jumlah" inputmode="numeric" placeholder="100"></div>
+    </div>
+
+    <div class="input-group">
+      <label>Upah Buruh (%)</label>
+      <div class="input-box"><span>%</span><input type="text" id="upah" inputmode="decimal" placeholder="10"></div>
+    </div>
+
+    <div class="input-group">
+      <label>Biaya Umum (%)</label>
+      <div class="input-box"><span>%</span><input type="text" id="umum" inputmode="decimal" placeholder="5"></div>
+    </div>
+
+    <div class="input-group">
+      <label>Biaya Lain-lain (%)</label>
+      <div class="input-box"><span>%</span><input type="text" id="lain" inputmode="decimal" placeholder="3"></div>
+    </div>
+
+    <button class="btn-hitung" onclick="hitung()">HITUNG</button>
+    <button class="btn-reset" onclick="resetKalkulator()">RESET</button>
+  </div>
+
+  <div class="card hasil" id="hasil">
+    <h2>Hasil Perhitungan</h2>
+    <div class="result utama"><div><span>Foot Cost</span><strong id="hasilFoot">Rp0</strong></div></div>
+    <div class="result"><span>Harga Jual Per Biji</span><strong id="hasilHarga">Rp0</strong></div>
+    <div class="result"><span>Laba Kotor</span><strong id="hasilKotor">Rp0</strong></div>
+    <div class="result"><span>Upah Buruh</span><strong id="hasilUpah">Rp0</strong></div>
+    <div class="result"><span>Biaya Umum</span><strong id="hasilUmum">Rp0</strong></div>
+    <div class="result"><span>Biaya Lain-lain</span><strong id="hasilLain">Rp0</strong></div>
+    <div class="result bersih"><span>Laba Bersih</span><strong id="hasilBersih">Rp0</strong></div>
+  </div>
+
+  <div class="card rumus">
+    <h2>Rumus Perhitungan</h2>
+    <p><b>Foot Cost</b><br>(100 ÷ Foot Cost %) × Modal Awal</p>
+    <p><b>Harga Jual Per Biji</b><br>Foot Cost ÷ Jumlah Biji</p>
+    <p><b>Laba Kotor</b><br>Foot Cost − Modal Awal</p>
+    <p><b>Upah Buruh</b><br>Modal Awal × Persentase Upah Buruh</p>
+    <p><b>Biaya Umum</b><br>Modal Awal × Persentase Biaya Umum</p>
+    <p><b>Biaya Lain-lain</b><br>Modal Awal × Persentase Biaya Lain-lain</p>
+    <p><b>Laba Bersih</b><br>Modal Awal − (Upah Buruh + Biaya Umum + Biaya Lain-lain)</p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
